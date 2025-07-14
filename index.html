@@ -2,20 +2,69 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>Avatar Builder</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mon Avatar Builder</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="container">
-    <div class="preview">
-      <img id="preview-img" src="images/body1.png" alt="Avatar Preview" />
+  <div class="bento">
+    <div class="bento-preview">
+      <button class="download-btn">Download</button>
+      <img id="preview-body" src="images/body1.png" alt="Preview Body" />
+      <img id="preview-head" src="images/head1.png" alt="Preview Head" />
+      <img id="preview-face" src="images/face1.png" alt="Preview Face" />
     </div>
 
-    <div class="selector-grid">
-      <img class="selector" src="images/body1.png" data-preview="images/body1.png" alt="Body 1" />
-      <img class="selector" src="images/body2.png" data-preview="images/body2.png" alt="Body 2" />
-      <img class="selector" src="images/body3.png" data-preview="images/body3.png" alt="Body 3" />
-      <!-- Ajoute autant que tu veux -->
+    <div class="bento-grid-section">
+      <div class="stepper">
+        <button class="active" data-step="face">Face</button>
+        <button data-step="head">Head</button>
+        <button data-step="body">Body</button>
+      </div>
+
+      <div class="bento-grid">
+        <!-- Face thumbnails -->
+        <img src="images/face1.png" alt="face1" data-step="face" class="selected" />
+        <img src="images/face2.png" alt="face2" data-step="face" />
+        <img src="images/face3.png" alt="face3" data-step="face" />
+        <img src="images/face4.png" alt="face4" data-step="face" />
+        <img src="images/face5.png" alt="face5" data-step="face" />
+        <img src="images/face6.png" alt="face6" data-step="face" />
+        <img src="images/face7.png" alt="face7" data-step="face" />
+        <img src="images/face8.png" alt="face8" data-step="face" />
+        <img src="images/face9.png" alt="face9" data-step="face" />
+        <img src="images/face10.png" alt="face10" data-step="face" />
+        <img src="images/face11.png" alt="face11" data-step="face" />
+        <img src="images/face12.png" alt="face12" data-step="face" />
+
+        <!-- Head thumbnails -->
+        <img src="images/head1.png" alt="head1" data-step="head" />
+        <img src="images/head2.png" alt="head2" data-step="head" />
+        <img src="images/head3.png" alt="head3" data-step="head" />
+        <img src="images/head4.png" alt="head4" data-step="head" />
+        <img src="images/head5.png" alt="head5" data-step="head" />
+        <img src="images/head6.png" alt="head6" data-step="head" />
+        <img src="images/head7.png" alt="head7" data-step="head" />
+        <img src="images/head8.png" alt="head8" data-step="head" />
+        <img src="images/head9.png" alt="head9" data-step="head" />
+        <img src="images/head10.png" alt="head10" data-step="head" />
+        <img src="images/head11.png" alt="head11" data-step="head" />
+        <img src="images/head12.png" alt="head12" data-step="head" />
+
+        <!-- Body thumbnails -->
+        <img src="images/body1.png" alt="body1" data-step="body" />
+        <img src="images/body2.png" alt="body2" data-step="body" />
+        <img src="images/body3.png" alt="body3" data-step="body" />
+        <img src="images/body4.png" alt="body4" data-step="body" />
+        <img src="images/body5.png" alt="body5" data-step="body" />
+        <img src="images/body6.png" alt="body6" data-step="body" />
+        <img src="images/body7.png" alt="body7" data-step="body" />
+        <img src="images/body8.png" alt="body8" data-step="body" />
+        <img src="images/body9.png" alt="body9" data-step="body" />
+        <img src="images/body10.png" alt="body10" data-step="body" />
+        <img src="images/body11.png" alt="body11" data-step="body" />
+        <img src="images/body12.png" alt="body12" data-step="body" />
+      </div>
     </div>
   </div>
 
