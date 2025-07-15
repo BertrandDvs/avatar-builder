@@ -8,27 +8,33 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #f0f0f0;
+  background: #FFFFFF;
   font-family: Arial, sans-serif;
+    --dot-bg: rgb(255, 255, 255);
+  --dot-color: rgb(232, 232, 232);
+  --dot-size: 2px;
+  --dot-space: 16px;
+	background:
+		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		var(--dot-color);
 }
 
 .bento {
   display: flex;
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 8px;
   overflow: hidden;
   width: 900px;
   height: 500px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  gap: 8px;
+  box-shadow: 0px 1px 3px 0px var(--shadow-4);
 }
 
 .bento-preview {
   position: relative;
   width: 50%;
   background: #fff;
-  border-right: 1px solid #ccc;
   overflow: hidden;
+  border-radius: 8px;
 }
 
 .bento-preview img {
@@ -71,7 +77,8 @@ body, html {
   display: flex;
   flex-direction: column;
   padding: 10px 20px;
-  background: #fafafa;
+  background: #ffffff;
+  border-radius: 8px;
 }
 
 .stepper {
@@ -84,25 +91,32 @@ body, html {
 .stepper button {
   flex: 1;
   padding: 10px 0;
-  background: #ddd;
   border: none;
-  border-radius: 5px;
-  font-weight: 600;
+  border-radius: 8px;
+  font-weight: 400;
   cursor: pointer;
-  transition: background-color 0.3s;
+  background-color: white;
 }
 
 .stepper button.active {
-  background: #007bff;
-  color: white;
+  border-radius: 8px;
+  border: 1px solid #FFF;
+  background: linear-gradient(180deg, #FFF 0%, #F7F7F7 100%);
+  box-shadow: 0px 15px 4px 0px rgba(0, 0, 0, 0.00), 0px 10px 4px 0px rgba(0, 0, 0, 0.01), 0px 5px 3px 0px rgba(0, 0, 0, 0.02), 0px 2px 2px 0px rgba(0, 0, 0, 0.04), 0px 1px 1px 0px rgba(0, 0, 0, 0.05);
+  color: #316bff;
 }
+
+.stepper button:hover {
+  background: rgb(243, 243, 243);
+}
+
 
 .bento-grid {
   flex: 1;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  gap: 10px;
+  gap: 8px;
   overflow-y: auto;
 }
 
@@ -111,15 +125,42 @@ body, html {
   height: 100%;
   object-fit: contain;
   cursor: pointer;
-  border: 2px solid transparent;
-  border-radius: 5px;
+  border: 1px solid #E6E6E6;
+  background: #FBFBFB;
+  border-radius: 8px;
   transition: border-color 0.3s;
+  user-select: none;
+  -webkit-user-drag: none; /* pour Safari */
+  pointer-events: auto; /* garder le clic */
 }
 
 .bento-grid img:hover {
-  border-color: #007bff;
+  border-color: #316bff;
 }
 
 .bento-grid img.selected {
-  border-color: #007bff;
+  border-color: #316bff;
+}
+
+.section {
+  background-color: #F3F6F9;
+  padding: 8px;
+  border-radius: 18px;
+  box-shadow: 0px 23px 7px 0px rgba(0, 0, 0, 0.00), 0px 15px 6px 0px rgba(0, 0, 0, 0.01), 0px 8px 5px 0px rgba(0, 0, 0, 0.03), 0px 4px 4px 0px rgba(0, 0, 0, 0.04), 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+.label{
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 8px;
+padding: 16px;
+}
+
+h4 {
+color: #566F8F;
+text-align: center;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
 }
